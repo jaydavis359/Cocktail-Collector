@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="center-align">Recipes</h3>
+
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
+            
             <img src="{{ recipe.img_url }}">
             <div class="collapsible-header">
-                <!-- </div> -->
                 <strong>{{ recipe.recipe_name }}</strong></div>
             <div class="collapsible-body">
                 <strong>{{ recipe.category_name }}</strong>
-                <p>Ingredients:  {{ recipe.recipe_ingredients }}</p>
-                <p>Preparation:  {{ recipe.preparation }}</p>
+                <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
+                <p><strong>Preparation:</strong>  {{ recipe.preparation }}</p>
             </div>
         </li>
         {% endfor %}
