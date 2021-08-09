@@ -1,12 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.recipe_ingredients }}<br>
-        {{ recipe.preparation }}<br>
-    {% endfor %}
+
+    <ul class="collapsible">
+        {% for recipe in recipes %}
+        <li>
+            <img src="{{ recipe.img_url }}">
+            <div class="collapsible-header">
+                <!-- </div> -->
+                <strong>{{ recipe.recipe_name }}</strong></div>
+            <div class="collapsible-body">
+                <strong>{{ recipe.category_name }}</strong>
+                <p>Ingredients:  {{ recipe.recipe_ingredients }}</p>
+                <p>Preparation:  {{ recipe.preparation }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 
-{% endblock %}    
+
+
+{% endblock %}
