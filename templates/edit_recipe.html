@@ -9,9 +9,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <select id="category_name" name="category_name" class="validate" required>
-                      <option value="" disabled selected>Choose Category</option>
+                      <option value="" disabled>Choose Category</option>
                       {% for category in categories %}
-                      <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}"selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                       {% endfor %}
                     </select>
                     <label for="category_name">Recipe Category</label>
@@ -21,35 +25,44 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
-                    type="text" class="validate" required>
+                        value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
             <!-- Recipe Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="recipe_ingredients" name="recipe_ingredients" type="tel" class="validate" required>
+                    <input id="recipe_ingredients" name="recipe_ingredients" 
+                        value="{{ recipe.recipe_ingredients }}" type="tel" class="validate" required>
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
             <!-- Preparation instructions -->
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="preparation" name="preparation" type="tel" class="validate" required>
+                    <input id="preparation" name="preparation" 
+                        value="{{ recipe.preparation }}" type="tel" class="validate" required>
                     <label for="preparation">Preparation</label>
                 </div>
             </div>
             <!-- Upload Image of Cocktail -->
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="img_url" name="img_url" type="tel" class="validate" required>
+                    <input id="img_url" name="img_url" 
+                        value="{{ recipe.img_url }}" type="tel" class="validate" required>
                     <label for="img_url">Image URL</label>
                 </div>
             </div>
             <!-- Submit button -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button class="btn-floating btn-large waves-effect waves-light black"><i class="fas fa-pencil-alt"></i>"></button>
+                    <!-- cancel button-->
+                    <a href="{{ url_for('get_recipes') }}" class="btn-floating btn-large black">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <button class="btn-floating btn-large black">
+                        <i class="fas fa-pencil-alt"></i>">
+                    </button>
                 </div>
             </div>
         </form>
