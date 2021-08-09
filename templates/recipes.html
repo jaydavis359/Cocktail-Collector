@@ -5,14 +5,16 @@
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li class="card">
+            <img src="{{ recipe.img_url }}">
             <div class="collapsible-header">
-                <img src="{{ recipe.img_url }}">
                 <strong>{{ recipe.recipe_name }}</strong></div>
             <div class="collapsible-body">
                 <strong>{{ recipe.category_name }}</strong>
                 <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
                 <p><strong>Preparation:</strong>  {{ recipe.preparation }}</p>
                 <p><em>by: {{ recipe.created_by }}</em></p>
+                <a class="btn-floating btn-small black"><i class="fas fa-plus"></i></a>
+                <a class="btn-floating btn-small black"><i class="fas fa-pencil-alt"></i></a>
             </div>
         </li>
         {% endfor %}
