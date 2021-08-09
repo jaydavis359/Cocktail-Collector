@@ -19,3 +19,12 @@ body {
   .page-footer {
       background-color: black;
   }
+
+  .collapsible-header {
+    height: 300px;
+    width: 50px;
+  }
+
+  li.card {
+    width: 400px;
+  }

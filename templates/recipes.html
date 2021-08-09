@@ -2,17 +2,17 @@
 {% block content %}
 
     <h3 class="center-align">Recipes</h3>
-    <ul class="container collapsible">
+    <ul class="collapsible">
         {% for recipe in recipes %}
-        <li>
-            
-            <img src="{{ recipe.img_url }}">
+        <li class="card">
             <div class="collapsible-header">
+                <img src="{{ recipe.img_url }}">
                 <strong>{{ recipe.recipe_name }}</strong></div>
             <div class="collapsible-body">
                 <strong>{{ recipe.category_name }}</strong>
                 <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
                 <p><strong>Preparation:</strong>  {{ recipe.preparation }}</p>
+                <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}

@@ -4,7 +4,8 @@
     <h3 class="center-align">Add Recipe</h3>
 
     <div class="row">
-        <form class="col s12" method="POST action">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+            <!-- Select Category -->
             <div class="row">
                 <div class="input-field col s12">
                     <select id="category_name" name="category_name" class="validate" required>
@@ -16,6 +17,7 @@
                     <label for="category_name">Recipe Category</label>
                   </div>
             </div>
+            <!-- Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
@@ -23,22 +25,31 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
+            <!-- Recipe Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_ingredients" name="recipe_ingredients" type="tel" class="validate" required>
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
+            <!-- Preparation instructions -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="preparation" name="preparation" type="tel" class="validate" required>
                     <label for="preparation">Preparation</label>
                 </div>
             </div>
+            <!-- Upload Image of Cocktail -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="img_url" name="img_url" type="tel" class="validate" required>
                     <label for="img_url">Image URL</label>
+                </div>
+            </div>
+            <!-- Submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn-floating btn-large waves-effect waves-light black"><i class="fas fa-plus"></i>"></button>
                 </div>
             </div>
         </form>
