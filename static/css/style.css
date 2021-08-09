@@ -22,6 +22,14 @@ body {
     flex: 1 0 auto;
   }
 
+  .callout-container {
+    height: 80vh;
+    background: url(../images/proriat-hospitality-lwoTuByIuC4-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width:auto;
+    position: relative;
+  }
+
   .page-footer {
       background-color: black;
   }
