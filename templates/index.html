@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container callout-container">
+<div class="callout-container">
 </div>
 <!-- Wecome text -->
-<div class="container-fluid">
-    <div class="row jumbotron">
-        <div class="col-12">
+<div class="container">
+    <div class="row">
+        <div class="col-6">
             <h3>Welcome</h3>
-            <h3>This is Cocktail Collector</h3>
+            <h4>This is Cocktail Collector, The site where you can collect, add and share your favourite Cocktails!</h4>
+            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn black">View Recepies
+               </a>
+               <a href="{{ url_for('register') }}" class="waves-effect waves-light btn black">Sign Up
+               </a>
         </div>
     </div>
 </div>
