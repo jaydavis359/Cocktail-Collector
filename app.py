@@ -193,7 +193,13 @@ def edit_category(category_id):
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
-    return redirect(url_for("get_categories"))    
+    return redirect(url_for("get_categories"))   
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return 'This page does not exist', 404     
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
