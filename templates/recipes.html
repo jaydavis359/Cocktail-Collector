@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Recipes</h3>
-        <form ></form>
+<h3 class="center-align">Recipes</h3>
+<div class="container">
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -21,29 +21,43 @@
             </div>
         </form>
     </div>
+</div>
 
+
+<!-- Test -->
+<div class="row container">
     {% if recipes|length > 0 %}
-    <ul class="collapsible">
+    <div class="row">
         {% for recipe in recipes %}
-        <li class="card">
-             <img src="{{ recipe.img_url }}">
-            <div class="collapsible-header">
-                <strong>{{ recipe.recipe_name }}</strong></div>
-            <div class="collapsible-body">
-                <strong>{{ recipe.category_name }}</strong>
-                <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
-                <p><strong>Preparation:</strong>  {{ recipe.preparation }}</p>
-                <p><em>by: {{ recipe.created_by }}</em></p>
-                {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-floating btn-small black"><i class="far fa-trash-alt"></i></a>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-floating btn-small black"><i class="fas fa-pencil-alt"></i></a>
-                {% endif %}
+        <div class="card recipe-card col 12 m4">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator recipe-image" src="{{ recipe.img_url }}">
             </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-        <h3 class="center-align">No Results Found</h3>
-    {% endif %}
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong><i class="fas fa-times-circle"></i></span>
+              <strong>{{ recipe.category_name }}</strong>
+                        <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
+                        <p><strong>Preparation:</strong> {{ recipe.preparation }}</p>
+                        <p><em>by: {{ recipe.created_by }}</em></p>
+                        {% if session.user|lower == recipe.created_by|lower %}
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="btn-floating btn-small black"><i class="far fa-trash-alt"></i></a>
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-floating btn-small black"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+</div>
+
+<!-- End Test -->
+
+{% else %}
+<h3 class="center-align">No Results Found</h3>
+{% endif %}
 
 {% endblock %}
