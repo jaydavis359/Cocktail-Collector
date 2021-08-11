@@ -113,6 +113,10 @@ main {
 }
 /* Recipe card formatting */
 
+.card-container {
+  max-width: 1000px;
+}
+
 img.activator.recipe-image {
   height: 280px;
   width: 300px;
