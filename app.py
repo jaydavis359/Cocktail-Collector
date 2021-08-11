@@ -121,6 +121,7 @@ def add_recipe():
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "preparation": request.form.get("preparation"),
             "img_url": request.form.get("img_url"),
+            "img_description": request.form.get("img_description"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
