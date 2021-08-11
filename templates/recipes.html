@@ -31,7 +31,7 @@
         {% for recipe in recipes %}
         <div class="card recipe-card col 12 m3">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator recipe-image" src="{{ recipe.img_url }}">
+              <img class="activator recipe-image" src="{{ recipe.img_url }}" alt="{{ recipe.img_description }}">
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
