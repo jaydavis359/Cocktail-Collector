@@ -12,8 +12,8 @@
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
         (function () {
             emailjs.init("user_wcsbfNta9lkfYK0WPKaXD");
         })();
@@ -71,7 +71,7 @@
         </ul>
     </header>
 
-    <section>
+    <div>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -82,7 +82,7 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-    </section>
+    </div>
 
     <main>
         {% block content %}
@@ -94,7 +94,7 @@
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <div class="col 16 s6 text-center">
+                <div class="col 12 l6 s12 text-center">
                     <div class="mail-content-container">
                         <h5 class="mr-auto"><i class="fa fa-envelope" aria-hidden="true"></i>Sign up to hear from us:</h5>
                         <form onsubmit="return sendMail(this);">
@@ -106,7 +106,7 @@
                         </form>
                     </div>
                 </div>
-                    <div class="col 14 s6 text-center">
+                    <div class="col 12 l6 s12 text-center">
                         <ul class="list-inline social-links">
                             <li class="list-inline-item">
                                 <a href="http://www.facebook.com" target="_blank">
