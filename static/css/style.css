@@ -13,18 +13,18 @@ body {
 }
 
 a.brand-logo {
-padding-left: 6px;
+  padding-left: 6px;
 }
 
 @media only screen and (max-width: 642px) {
   a.brand-logo {
-  font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 320px) {
   a.brand-logo {
-  font-size: 14px;
+    font-size: 14px;
   }
 }
 
@@ -54,6 +54,7 @@ main {
   background-color: black;
 
 }
+
 .footer-content {
   background-color: black;
   color: white;
@@ -82,9 +83,9 @@ main {
   color: black;
 }
 
-.social-links{
- display: inline-flex;
- float: right;
+.social-links {
+  display: inline-flex;
+  float: right;
 }
 
 .social-links li a i {
@@ -110,10 +111,10 @@ img.activator.recipe-image {
 }
 
 @media only screen and (min-width: 601px) {
-.row .col.m3 {
-  width:auto;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
+  .row .col.m3 {
+    width: auto;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
 }
