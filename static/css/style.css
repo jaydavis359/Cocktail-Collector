@@ -12,6 +12,7 @@ body {
   line-height: 2;
 }
 
+/* Navbar */
 a.brand-logo {
   padding-left: 6px;
 }
@@ -41,7 +42,7 @@ body {
 main {
   flex: 1 0 auto;
 }
-
+/* Home page image */
 .callout-container {
   height: 75vh;
   background: url(../images/proriat-hospitality-lwoTuByIuC4-unsplash.jpg) no-repeat center center fixed;
@@ -49,7 +50,7 @@ main {
   width: auto;
   position: relative;
 }
-
+/* Footer customization */
 .page-footer {
   background-color: black;
 
