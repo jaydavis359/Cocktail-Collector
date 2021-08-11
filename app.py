@@ -198,7 +198,7 @@ def delete_category(category_id):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return 'This page does not exist', 404     
+    return render_template('404.html')  
 
 
 if __name__ == "__main__":
