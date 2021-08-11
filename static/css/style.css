@@ -12,6 +12,22 @@ body {
   line-height: 2;
 }
 
+a.brand-logo {
+padding-left: 6px;
+}
+
+@media only screen and (max-width: 642px) {
+  a.brand-logo {
+  font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  a.brand-logo {
+  font-size: 14px;
+  }
+}
+
 .nav-wrapper {
   margin-bottom: 0;
 }
@@ -87,13 +103,17 @@ main {
 }
 
 /* Recipe card formatting */
-.recipe-card {
-  height: 350px;
+
+img.activator.recipe-image {
+  height: 280px;
   width: 300px;
 }
 
-.recipe-image {
-  height: 270px;
-  width: 300px;
-  
+@media only screen and (min-width: 601px) {
+.row .col.m3 {
+  width:auto;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
 }
