@@ -119,6 +119,19 @@ main {
 }
 }
 
+/* Modal styling */
+
+.modal h4 {
+  font-size: 1.5rem;
+}
+
+.modal.modal-footer {
+  padding: 1px;
+}
+
+a.modal-close.btn-flat {
+  color: black !important;
+}
 
 img.activator.recipe-image {
   height: 280px;
@@ -139,4 +152,10 @@ img.activator.recipe-image {
     left: auto;
     right: auto;
   }
+}
+
+/* manage category page */
+
+.category-row {
+  max-width: 1000px;
 }
