@@ -8,6 +8,8 @@
 
 Cocktail collector is a recipe website where users, mostly cocktail fans, can search for and post their favourite recipes, it has a recipe page where all users recipes can be viewed, it has a menber login function with ability to edit and delete recipes, and also an email sign up in the footer of the page so that users can recieve news updates.
 
+
+
 ## UX
 
 ### This website is for:
@@ -38,6 +40,10 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 * Icons - The icons used in this project are taken from [Font Awesome](https://fontawesome.com/), I used font awesome for its diverse range of icons.
 
 ### Wireframes 
+
+* [Homepage](/workspace/Cocktail-Collector/wireframes/Home Wireframe.pdf)
+* [Recipes](/workspace/Cocktail-Collector/wireframes/Recipes Wireframe.pdf)
+
 
 
 
