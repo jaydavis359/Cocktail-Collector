@@ -38,3 +38,28 @@
 * As an Admin of the website, I would like all of the above capabilities, but also the ability to add, edit and delete categories of recipes.
     - This can be done through the manage catagories option on the navbar.
 
+## Aditional Testing
+
+* Navagation bar elements tested and functional across all device sizes, each link directing to the appropriate page
+and from each page back.
+* Website title heading in the navagetion bar acts as alternate home button link as intended.
+* Hamburger navagation menu, expands correctly, without affecting other elements, in all screen sizes.
+* Email sign up box will only accept a valid email address and returns a confirmation when the submit button is pressed, as intended.
+
+## Bugs 
+
+* I ran into a lot of css issues as the materalize template was overriding most commands, this has let to some alignment issues on smaller devices.
+
+## Devices 
+
+In addition to emulated devices in chrome dev tools the Website was inspected on the following physical devices:
+* Surface pro 4 12" screen
+* Surface pro 4 connected to 27" monitor.
+* Samsung Galaxy S9 Plus
+* Apple Macbook Air 2017
+
+## Browsers used
+* Google Chrome on Windows 10
+* Microsoft Edge on Windows 10
+* Firefox on Windows 10
+* Safari on Mac OS
