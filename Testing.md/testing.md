@@ -45,6 +45,7 @@ and from each page back.
 * Website title heading in the navagetion bar acts as alternate home button link as intended.
 * Hamburger navagation menu, expands correctly, without affecting other elements, in all screen sizes.
 * Email sign up box will only accept a valid email address and returns a confirmation when the submit button is pressed, as intended.
+* Social media icons in the footer all direct to their respective websites in a new tab as intended.
 
 ## Bugs 
 
