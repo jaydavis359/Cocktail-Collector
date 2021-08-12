@@ -11,6 +11,8 @@
 
 * [PEP8](http://pep8online.com/) was used to check for PEP8 compliance in the python file, this flagged multiple 'trailing whitespace' issues in my app.py file, once these were fixed using the 'trim trailing whitespace' command in gitpod no further errors were found.
 
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was an absolutely invaluable resource in the projects development. it helped with multiple alignment issues. I also used the 'Lighthouse' utility, with all pages having between 80% and 100% scores.  
+
 ## Responsiveness
 
 * Chrome dev. tools was used at every stage of designing the website to ensure that the core structure and style of the website remained the same across all devices.
