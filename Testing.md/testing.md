@@ -42,6 +42,7 @@
 
 ## Aditional Testing
 
+* A gmail acccount was setup to recieve the emails from the sign up form in the footer, this did recieve the users email address with a sign up request message as intended.
 * Navagation bar elements tested and functional across all device sizes, each link directing to the appropriate page
 and from each page back.
 * Website title heading in the navagetion bar acts as alternate home button link as intended.
