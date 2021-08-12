@@ -41,8 +41,9 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 
 ### Wireframes 
 
-* [Homepage](/workspace/Cocktail-Collector/wireframes/Home Wireframe.pdf)
-* [Recipes](/workspace/Cocktail-Collector/wireframes/Recipes Wireframe.pdf)
+* [Homepage](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Home%20Wireframe.pdf)
+* [Recipes](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Recipes%20Wireframe.pdf)
+
 
 
 
