@@ -41,8 +41,19 @@
                         <p><strong>Preparation:</strong> {{ recipe.preparation }}</p>
                         <p><em>by: {{ recipe.created_by }}</em></p>
                         {% if session.user|lower == recipe.created_by|lower %}
-                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="btn-floating btn-small black"><i class="far fa-trash-alt"></i></a>
+                        <!-- delete button modal trigger -->
+                        <a href="#modal1{{ loop.index }}" class="modal-trigger btn-floating btn-small black"><i class="far fa-trash-alt"></i></a>
+                            <!-- delete button modal info -->
+                            <div id="modal1{{ loop.index }}" class="modal container">
+                                <div class="modal-content">
+                                    <h4>You really want to delete {{ recipe.recipe_name }}?</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="modal-close  btn-flat">Cancel</a>
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close btn-flat">Delete</a>
+                                </div>
+                            </div>
+
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-floating btn-small black"><i
                                 class="fas fa-pencil-alt"></i></a>
                         {% endif %}
