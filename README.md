@@ -109,3 +109,15 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 
 
 
+## Credits
+
+### Images
+
+* The home page hero image was taken from [unsplash](https://unsplash.com/) and was taken by @proriat_hospitality.
+
+* The cocktail pictures on the recipe page were taken from [BBC Goodfood](https://www.bbcgoodfood.com/) and [Liquor.com](https://www.liquor.com/)
+
+
+## This website is for educational purposes only.
+
+
