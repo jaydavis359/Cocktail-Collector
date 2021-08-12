@@ -43,9 +43,9 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 
 * [Homepage](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Home%20Wireframe.pdf)
 * [Recipes](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Recipes%20Wireframe.pdf)
-
-
-
+* [Login/Register](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Login%20Register%20Wireframe.pdf)
+* [Add/Edit Recipe](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Add%20Edit%20Recipe%20Wireframe.pdf)
+* [Profile](https://github.com/jaydavis359/Cocktail-Collector/blob/main/wireframes/Profile%20Wireframe.pdf)
 
 
 ## Features
@@ -114,15 +114,44 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 
 ## Deployment
 
+### Deploy with Heroku
 
+* In the terminal of your IDE type 'pip3 freeze --local > requirements.txt 
+* In the terminal of your IDE type 'python app.py > Procfile
+* Login to Heroku and create a new app
+* In the apps top menu click on the 'deploy' tab, then scroll down and select the 'Connect to Github' option.
+* Search for your Github repository and when found, connect to it.
+* Go to the settings tab in Heroku and scroll down to the 'Config Vars' option, then click on 'Reveal Config Vars'.
+* Enter the variables contained in your 'env.py' file i.e IP, PORT, SECRET_KEY, MONGO_URL and MONGO_DBNAME.
+* Go to the deploy tab in Heroku and scroll down again to the 'Automatic Deployment' section, click on 'Enable Automatic Deploys'.
+* Heroku is now linked to your github repository and will host your app, the live app can be viewed by clicking the 'Open App' button at the top of the page.
+
+### To run the Website locally
+
+* It can be 'Forked' which makes an editable copy of the repository, without affecting the original. This can be done from the [repository homepage](https://github.com/jaydavis359/Cocktail-Collector),
+In the top right of the page there is a 'Fork' button which will create a copy of the repository in your own GitHub account.
+  
+* It can also be 'Cloned' which creates a 'remote' repository which can be synced with the main one. To do this:
+> open the [repository homepage](https://github.com/jaydavis359/Cocktail-Collector)
+> Click on the 'Code' button near the top right of the screen.
+> Under 'Clone' with the HTTPS option selected, copy the url link.
+> Open your own IDE and switch to the directory where you want the cloned directory.
+> Type 'git clone', and then paste the URL you copied earlier.
+> Press enter and the repository will be cloned.
 
 ## Credits
+
+* [W3Schools](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/) for all kinds of help during the project.
 
 ### Images
 
 * The home page hero image was taken from [unsplash](https://unsplash.com/) and was taken by @proriat_hospitality.
 
 * The cocktail pictures on the recipe page were taken from [BBC Goodfood](https://www.bbcgoodfood.com/) and [Liquor.com](https://www.liquor.com/)
+
+### Acknowledgements
+
+* I would like to thank my mentor Excellence Ilesanmi for all his support.
 
 
 ## This website is for educational purposes only.
