@@ -94,6 +94,7 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
+    # additional function setup credit stackoverflow
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
