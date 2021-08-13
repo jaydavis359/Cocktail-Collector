@@ -163,3 +163,9 @@ img.activator.recipe-image {
 .category-row {
   max-width: 1000px;
 }
+
+/* Profile page */
+
+.profile-container {
+  max-width: 1000px;
+}
