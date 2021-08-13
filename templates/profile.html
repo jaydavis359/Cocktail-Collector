@@ -5,7 +5,7 @@
     <div class="col s12 m8 offset-m2">
         <div class="card-panel">
             <h3 class="center-align">
-                Welcome {{ username }}
+                {{ username }}'s Profile
             </h3>
         </div>
     </div>
@@ -13,11 +13,48 @@
 <div class="row container">
     <div class="col s12 m8 offset-m2">
             <h3 class="center-align">
-                {{ username }}'s Recipes
+                Added Recipes
             </h3>
     </div>
 </div>
 
+<!-- Display user recepies -->
 
+<div class="row container profile-container">
+    {% for recipe in user_recipes %}
+    <div class="card recipe-card col 12 m3">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator recipe-image" src="{{ recipe.img_url }}" alt="{{ recipe.img_description }}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong>&nbsp;<i class="fas fa-times-circle"></i></span>
+          <strong>{{ recipe.category_name }}</strong>
+                    <p><strong>Ingredients:</strong> {{ recipe.recipe_ingredients }}</p>
+                    <p><strong>Preparation:</strong> {{ recipe.preparation }}</p>
+                    <p><em>by: {{ recipe.created_by }}</em></p>
+                    {% if session.user|lower == recipe.created_by|lower %}
+                    <!-- delete button modal trigger -->
+                    <a href="#modal1{{ loop.index }}" class="modal-trigger btn-floating btn-small black"><i class="far fa-trash-alt"></i></a>
+                        <!-- delete button modal info -->
+                        <div id="modal1{{ loop.index }}" class="modal container">
+                            <div class="modal-content">
+                                <h4>You really want to delete {{ recipe.recipe_name }}?</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="modal-close  btn-flat">Cancel</a>
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-close btn-flat">Delete</a>
+                            </div>
+                        </div>
+
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-floating btn-small black"><i
+                            class="fas fa-pencil-alt"></i></a>
+                    {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
 
 {% endblock %}
