@@ -113,6 +113,10 @@ main {
   max-width: 1000px;
 }
 
+.recipe-card {
+  height: 368px !important;
+  width: 322.5px !important;
+}
 @media only screen and (min-width: 993px) {
   .container {
     width: 100%;
