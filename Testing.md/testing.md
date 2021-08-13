@@ -52,6 +52,7 @@ and from each page back.
 
 ## Bugs 
 
+* The email sign up on the the 'profile' page does not process the request, and no confirmation modal appears, This function extends from the base and works on all other pages, it is not something I have been able to fix. 
 * I ran into a lot of css issues as the materalize template was overriding most commands, this has let to some alignment issues on smaller devices.
 
 ## Devices 
