@@ -26,7 +26,7 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 * As a visitor to this website, I would like an email sign up option, to be kept up to date with site news.
 * As a visitor to this webiste, I would like the option to follow the site on social media platforms.
 
-* As a member of the website, I would like to Login and view the recipes I have posted.
+* As a member of the website, I would like to Login to my profile and view the recipes I have posted.
 * As a member of the webiste, I would like the ability to add, edit and delete recipes.
 
 * As an Admin of the website, I would like all of the above capabilities, but also the ability to add, edit and delete categories of recipes.
@@ -38,6 +38,11 @@ Cocktail collector is a recipe website where users, mostly cocktail fans, can se
 * Font - The font I have used for the site is [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono), this font covers all text elements, I selected this font because of its typewriter like text appearance, I think this gives the site that kind of 'old world' apperence which is often associated with cocktails.
 
 * Icons - The icons used in this project are taken from [Font Awesome](https://fontawesome.com/), I used font awesome for its diverse range of icons.
+
+## Defensive Design
+
+* Deleting - When a user clicks on the delete icon of one of their recipes a pop up modal appears, asking for comfirmation of that deletion, this prevents accidental deletion of their recipes.
+Also a user can only delete recipes that they have uploaded themselves, the delete option does not appear for other users recipes.
 
 ### Wireframes 
 
